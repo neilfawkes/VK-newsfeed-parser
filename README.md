@@ -10,7 +10,6 @@
 - BeautifulSoup
 - datetime
 - pandas
-- pandas
 - urllib.request
 - ssl
 - shutil
