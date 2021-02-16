@@ -1,10 +1,10 @@
 # VK newsfeed parser
 
-Данный скрипт позволяет парсить новостную ленту ВК с помощью библиотеки Selenium.
-На вход скрипт принимает логин и пароль от ВК, на выходе сохраняет информацию о постах в ленте в Excel-файл (автор поста, дата, текст, количество лайков, репостов и просмотров).
-Помимо этого, скрипт сохраняет фотографии из постов (если они есть; если их несколько, то первую) и создаёт архив "images.zip".
+This script is parsing the newsfeed of vk.com using Selenium.
+The input is login and password to vk.com, the output (author of the post, date, text, number of likes, shares and views) is saved in Excel file.
+Also this script saves photos from posts (if there are photos in posts; in case of several photos it saves the first one) and creates the archive "images.zip".
 
-Использованные библиотеки:
+Libraries used in this project:
 - selenium
 - chromedriver_binary
 - BeautifulSoup
