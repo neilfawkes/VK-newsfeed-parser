@@ -11,8 +11,8 @@ import os
 
 
 if __name__ == "__main__":
-    user = input('Введите логин: ')
-    password = input('Введите пароль: ')
+    user = input('Input login: ')
+    password = input('Input password: ')
     
     URL = "https://www.vk.com/"
     chrome_options = webdriver.ChromeOptions()
@@ -87,7 +87,7 @@ if __name__ == "__main__":
                 out.write(jpg)
                 out.close()
             except Exception:
-                print('ссылка не открывается')
+                print('Unsupported link type')
             title+=1
         else:
             print('No photo')
@@ -96,12 +96,12 @@ if __name__ == "__main__":
     driver.quit()
 
     df = pd.DataFrame({
-        'Группа': authors_list,
-        'Дата поста': dates_list,
-        'Текст поста': texts_list,
-        'Лайки': likes_list,
-        'Репосты': shares_list,
-        'Просмотры': views_list
+        'Group': authors_list,
+        'Date': dates_list,
+        'Contents': texts_list,
+        'Liked': likes_list,
+        'Shared': shares_list,
+        'Views': views_list
     })
 
     writer = ExcelWriter('stats.xlsx')
@@ -110,4 +110,4 @@ if __name__ == "__main__":
 
     shutil.make_archive('images', 'zip', 'images')
 
-    print('\nГотово!')
+    print('\Done!')
